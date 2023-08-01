@@ -1,4 +1,6 @@
 FROM apache/airflow:slim-2.4.3-python3.7
+WORKDIR /app
+COPY . .
 USER root
 RUN apt -y update \ 
     &&  DEBIAN_FRONTEND=noninteractive apt install -y \

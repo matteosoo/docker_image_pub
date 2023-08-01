@@ -29,6 +29,7 @@ RUN apt -y update \
         sudo=1.9.5p2-3+deb11u1
 USER airflow
 RUN pip install -r requirements.txt
+RUN pip install wheel==0.38.1
 USER root
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \

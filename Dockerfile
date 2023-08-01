@@ -24,16 +24,8 @@ RUN apt -y update \
         ncurses-base=6.2+20201114-2+deb11u1 \
         ncurses-bin=6.2+20201114-2+deb11u1 \
         openssl=1.1.1n-0+deb11u5 \
-        sudo=1.9.5p2-3+deb11u1 \
-RUN pip install --no-cache-dir \
-    &&  Flask==2.3.2 \
-        Flask-AppBuilder==4.3.0 \
-        Werkzeug==2.2.3 \
-        certifi==2022.12.7 \
-        cryptography==41.0.2 \
-        sqlparse==0.4.4 \
-        wheel==0.38.1
-
+        sudo=1.9.5p2-3+deb11u1
+RUN pip install -r requirements.txt
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
     gnupg \

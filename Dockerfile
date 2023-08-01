@@ -27,10 +27,6 @@ RUN apt -y update \
         ncurses-bin=6.2+20201114-2+deb11u1 \
         openssl=1.1.1n-0+deb11u5 \
         sudo=1.9.5p2-3+deb11u1
-USER airflow
-RUN pip install -r requirements.txt
-RUN pip install wheel==0.38.1
-USER root
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
     gnupg \
@@ -38,3 +34,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 RUN apt-get update && \
     apt-get -y install libsndfile1
+USER airflow
+RUN pip install -r requirements.txt

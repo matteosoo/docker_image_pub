@@ -1,4 +1,4 @@
-FROM apache/airflow:2.4.3-python3.7-slim:v1
+FROM apache/airflow:slim-2.4.3-python3.7
 USER root
 # 安裝必要的套件以及 nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04 相關的套件
 RUN apt-get update && apt-get install -y --no-install-recommends \

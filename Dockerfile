@@ -19,7 +19,12 @@ RUN apt -y update \
         libtasn1-6=4.16.0-2+deb11u1 \
         libtinfo6=6.2+20201114-2+deb11u1 \
         libudev1=247.3-7+deb11u2 \
-        libxml2=2.9.10+dfsg-6.7+deb11u4 
+        libxml2=2.9.10+dfsg-6.7+deb11u4 \
+        libksba8=1.5.0-3+deb11u2 \
+        ncurses-base=6.2+20201114-2+deb11u1 \
+        ncurses-bin=6.2+20201114-2+deb11u1 \
+        openssl=1.1.1n-0+deb11u5 \
+        sudo=1.9.5p2-3+deb11u1
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \

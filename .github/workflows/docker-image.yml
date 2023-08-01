@@ -22,7 +22,7 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'docker.io/matteosoo/docker build -t airflow:slim-2.4.3-python3.7-libsndfile1 .:${{ github.sha }}'
+          image-ref: 'docker.io/matteosoo/airflow:${{ github.sha }}'
           format: 'table'
           exit-code: '1'
           ignore-unfixed: true
@@ -36,4 +36,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       
       - name: push image to dockerhub
-        run: docker push docker.io/matteosoo/docker build -t airflow:slim-2.4.3-python3.7-libsndfile1 .:${{ github.sha }}
+        run: docker push docker.io/matteosoo/airflow:${{ github.sha }}

@@ -11,6 +11,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gnupg \
     ca-certificates \
     && rm -rf /var/lib/apt/lists/*
-RUN pip install --upgrade pip
 RUN apt-get update && \
     apt-get -y install libsndfile1

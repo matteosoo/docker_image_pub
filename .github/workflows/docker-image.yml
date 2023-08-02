@@ -36,4 +36,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       
       - name: push image to dockerhub
-        run: docker push docker.io/matteosoo/airflow:${{ github.sha }}
+        run: docker push docker.io/matteosoo/airflow-2.4.3-python3.7-libsndfile1-cai:v2

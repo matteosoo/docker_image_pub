@@ -17,7 +17,7 @@ jobs:
       - name: Build an image from Dockerfile
         id: buildx
         run: |
-          docker build -t docker.io/matteosoo/airflow:${{ github.sha }} ./
+          docker build -t docker.io/matteosoo/airflow:${{ github.sha }} ./cai_docker
  
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master

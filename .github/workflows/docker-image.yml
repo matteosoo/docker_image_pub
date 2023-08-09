@@ -17,12 +17,12 @@ jobs:
       - name: Build an image from Dockerfile
         id: buildx
         run: |
-          docker build -t docker.io/matteosoo/airflow-2.4.3-python3.7-libsndfile1-cuda-cai:${{ github.sha }} ./add_cuda_driver
+          docker build -t docker.io/matteosoo/airflow-2.4.3-python3.7-libsndfile1-cuda12.2-cai:${{ github.sha }} ./add_12_2_cuda_driver
  
       # - name: Run Trivy vulnerability scanner
       #   uses: aquasecurity/trivy-action@master
       #   with:
-      #     image-ref: 'docker.io/matteosoo/airflow-2.4.3-python3.7-libsndfile1-cuda-cai:${{ github.sha }}'
+      #     image-ref: 'docker.io/matteosoo/airflow-2.4.3-python3.7-libsndfile1-cuda12.2-cai:${{ github.sha }}'
       #     format: 'table'
       #     exit-code: '1'
       #     ignore-unfixed: true
@@ -36,4 +36,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       
       - name: push image to dockerhub
-        run: docker push docker.io/matteosoo/airflow-2.4.3-python3.7-libsndfile1-cuda-cai:${{ github.sha }}
+        run: docker push docker.io/matteosoo/airflow-2.4.3-python3.7-libsndfile1-cuda12.2-cai:${{ github.sha }}

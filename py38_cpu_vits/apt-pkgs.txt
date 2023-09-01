@@ -7,3 +7,4 @@ libblas-dev
 gcc 
 g++ 
 cmake
+libpq-dev

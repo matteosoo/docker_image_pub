@@ -1,4 +1,4 @@
-FROM nvcr.io/nvidia/cuda:11.4.0-cudnn8-runtime-ubuntu18.04
+FROM nvcr.io/nvidia/cuda:11.4.3-cudnn8-runtime-ubuntu18.04
 USER root
 WORKDIR /app
 

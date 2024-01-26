@@ -7,3 +7,9 @@
    * airflow2.4.3:slim with debian 11 is supported by [CUDA 12](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Debian&target_version=11) ✅
 * py38_cpu_vits
    * add text-to-speech project neccessory packages.
+* py38_cuda_vits
+   * add cuda11.4.3 gpu speedup
+* py39_cuda_vits
+   * add cuda11.4.3 gpu speedup on Python3.9.5
+* py311_cuda_vits
+   * add cuda11.4.3 gpu speedup on Python3.11.5

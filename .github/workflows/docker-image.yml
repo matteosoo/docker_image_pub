@@ -17,11 +17,11 @@ jobs:
       - name: Build an image from Dockerfile
         id: buildx
         run: |
-          docker build -t docker.io/matteosoo/py38_cuda_vits:${{ github.sha }} ./py38_cuda_vits
+          docker build -t docker.io/matteosoo/py39_cuda_vits:${{ github.sha }} ./py39_cuda_vits
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'docker.io/matteosoo/py38_cuda_vits:${{ github.sha }}'
+          image-ref: 'docker.io/matteosoo/py39_cuda_vits:${{ github.sha }}'
           format: 'table'
           exit-code: '1'
           ignore-unfixed: true
@@ -35,4 +35,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       
       - name: push image to dockerhub
-        run: docker push docker.io/matteosoo/py38_cuda_vits:${{ github.sha }}
+        run: docker push docker.io/matteosoo/py39_cuda_vits:${{ github.sha }}

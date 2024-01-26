@@ -8,7 +8,8 @@
 * py38_cpu_vits
    * add text-to-speech project neccessory packages.
 * py38_cuda_vits
-   * add cuda11.4.3 gpu speedup
+   * add text-to-speech project neccessory packages based on nvidia/cuda:11.4.3-cudnn8-runtime-ubuntu18.04.
+   * cuda gpu support ✅
 * py39_cuda_vits
    * add cuda11.4.3 gpu speedup on Python3.9.5
 * py311_cuda_vits
